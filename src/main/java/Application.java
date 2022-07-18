@@ -2,7 +2,7 @@
 class Application {
     private Dialog dialog;
 
-    void initialize(){
+    void initialize() throws Exception{
 
         String config_os = "Windows"; // MDIFICAR
 
@@ -21,9 +21,14 @@ class Application {
         return dialog;
     }
 
-    public static void main(){
+    public static void main(String[] args){
         Application app = new Application();
-        app.initialize();
-        app.getDialog().render()
+        try {
+            app.initialize();
+            app.getDialog().render();
+        } catch (Exception error){
+            System.out.println(error.getMessage());
+        }
+
     }
 }

@@ -2,9 +2,9 @@
 public class WindowsButton implements Button {
 
     public void render(){
-        System.out.println("WindowsButton.render()");
+        System.out.println("Running WindowsButton.render()");
     }
     public void onClick(){
-        System.out.println("WindowsButton.onClick()");
+        System.out.println("Running WindowsButton.onClick()");
     }
 }
